@@ -1,0 +1,68 @@
+//HTML Body Layout Design
+//Non-Semantic Elements{<div>&<span>}
+//CSS Borders{
+  {
+	  border: size  style color;
+	}
+
+	size	: in pixels
+	style	: double ,dotted, solid, dashed, groove etc.
+	color	: color name, shade, hexa etc.}
+
+
+//CSS Margin & Padding{
+  {
+	  margin: all directions;
+	  margin-left: pixels;
+	  margin-right: pixels;		=> similar for padding
+	  margin-top: pixels;
+	  margin-bottom:pixels;
+	}
+}
+
+
+<!DOCTYPE html>
+<html lang="en-in">
+   <head>
+      <title>UI</title>    
+      <link rel="shortcut icon" href="./public/images/favicon.ico">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style>
+          div {
+              border: 1px solid black;
+              margin:20px;
+              padding: 10px;
+          }
+          span  {
+            color:red;
+          }
+      </style>
+   </head>
+   <body>
+      <div>
+          Web Technologies
+          <div>
+             Front End
+             <div>
+                HTML <br>
+                It is a <span>markup</span> language.
+             </div>
+             <div>
+                CSS <br> 
+                It is used for styling.
+             </div>
+          </div>
+          <div>
+            Back End
+            <div>
+               MongoDB <br> 
+               It is a database.
+            </div>
+            <div>
+               Express JS <br> 
+               It is a middleware.
+            </div>
+          </div>
+      </div>
+   </body>
+</html>
