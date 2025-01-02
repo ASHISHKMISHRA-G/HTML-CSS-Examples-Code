@@ -1,0 +1,84 @@
+CSS Colors:
+1. Color Name
+2. Color Shade Name
+3. Hexadecimal (#RGB, #RRGGBB)
+4. rgb()
+    - It refers to Red, Green and Blue.
+    - Every color range from 0 to 255.
+
+Syntax:
+    {
+      color: rgb(redValue, greenValue, blueValue);
+    }
+Ex:
+    header {
+        background-color: rgb(255,0,0);
+    }
+
+5. rgba()
+    - It is a combination of Red, Green and Blue with Alpha.
+    - Alpha sets transparent color.
+    - Alpha value can be 0 to 1.
+
+Syntax:
+    {
+      color : rgba(red, green, blue, alpha);
+    }
+Ex:
+    {
+     background-color: rgba(255, 0,0, 0.5);
+    }
+
+6. hsl()
+    - It refers to "Hue, Saturation and Lightning".
+    - Hue is an angle from 0 to 360deg.
+    0 to 120        Red
+    121 to 240    Green
+    241 to 360    Blue
+    - Saturation is grey % from 1 to 100%.
+    - Lightness is brightness from 1 to 100%
+
+Syntax:
+        {
+          color: hsl(hue, sat, light);
+        }
+
+Ex:
+       {
+          background-color: hsl(10deg, 50%, 20%);
+       }
+
+
+7. hsla()
+    - Hue, saturation, lightness and alpha.
+    - Alpha from 0 to 1
+
+Syntax:
+     {
+      color: hsla(10deg, 50%, 50%, 0.5);
+     }
+
+
+8. Gradient Colors
+   - It is possible by using "background-image" property of CSS.
+   - Gradient is a set of colors.
+   - It can be "Linear Gradient" or  "Radial Gradient".
+
+Syntax:
+     {
+        background-image: linear-gradient(direction, color1, color2,..);
+    }
+
+Ex:
+  body {
+            background-image: linear-gradient(to top right,red 50%, yellow, green);
+            height: 100vh;
+        }
+
+Ex:
+<style>
+        body {
+            background-image: radial-gradient(red, yellow, green);
+            height: 100vh;
+        }
+    </style>
