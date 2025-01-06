@@ -1,0 +1,82 @@
+/*
+    <Figure> & <Figcaption>
+
+- "Figure" container is used to display image with a caption.
+- "Figcaption" sets caption for image to make it SEO friendly.
+
+Syntax:
+    <figure>
+        .... your image...
+
+       
+       <figcaption> Caption </figcaption>
+    </figure>
+
+*/
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialog</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        dialog {
+            width: 300px;
+            border:1px solid gray;
+            border-radius: 10px;
+            height: 400px;
+            background-color: lightgoldenrodyellow;
+        }
+        .dialog-header {
+            background-color: rgb(76, 76, 203);
+            color:white;
+            font-size: 25px;
+            font-weight: bold;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            height: 50px;
+        }
+        .dialog-title {
+            font-size: 22px;
+            font-weight: bold;
+            font-family: Arial;
+            margin-top: 30px;
+        }
+        figure {
+            border: 1px dotted gray;
+            padding: 10px;
+            width: 200px;
+            height: 200px;
+            box-shadow: 2px 2px 2px black;
+        }
+        .img {
+            border:1px solid red;
+            width: 200px;
+            height: 150px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <dialog open>
+        <div class="dialog-header">
+            <span class="bi bi-person-fill"> ASK DISHA </span>
+            <span class="bi bi-x"></span>
+        </div>
+        <div class="dialog-body">
+            <div class="dialog-title">Good Evening ! </div>
+            <div>How may I help you today?</div>
+            <figure>
+                <div class="img">
+
+                </div>
+                <figcaption>Train Ticket</figcaption>
+            </figure>
+        </div>
+    </dialog>
+</body>
+</html>
