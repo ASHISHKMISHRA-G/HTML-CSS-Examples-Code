@@ -1,0 +1,121 @@
+/*
+CSS Rational Selector:
+
+    element1   element2 {   }    refers to element2 inside element1
+    element1 + element2 {  }     refers to adjacent element of element1.
+    element1 ~ element2 {  }    refers to all elements that occur after element1.
+
+Syntax:
+            nav  span {  }        all span elements inside nav
+            nav+span {  }        the adjacent span after nav. [first]
+            nav~span {  }        all span elements after nav but with in the block
+
+*/
+
+Ex: Flipkart footer
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        footer {
+            background-color: black;
+            color:white;
+            padding: 10px;
+            font-size: 20px;
+            height: 200px;
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+        }
+        .left-panel {
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+        }
+        .right-panel {
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            border-left: 1px solid white;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <footer>
+        <div class="left-panel">
+            <div>Col-1</div>
+            <div>Col-2</div>
+            <div>Col-3</div>
+            <div>Col-4</div>
+        </div>
+        <div class="right-panel">
+            <div>Col-1</div>
+            <div>Col-2</div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
+/*
+      <dialog>
+- It is used to configure popups in a page.
+- Dialog is hidden by default, you have to show dialog using "open" attribute.
+- Dynamically dialog is controlled with Script. [JavaScript]
+
+Syntax:
+    <dialog  open>
+       ... your content ...
+    </dialog>
+*/
+
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialog</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        dialog {
+            width: 300px;
+            border:1px solid gray;
+            border-radius: 10px;
+            height: 300px;
+            background-color: lightgoldenrodyellow;
+        }
+        .dialog-header {
+            background-color: rgb(76, 76, 203);
+            color:white;
+            font-size: 25px;
+            font-weight: bold;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            height: 50px;
+        }
+        .dialog-title {
+            font-size: 22px;
+            font-weight: bold;
+            font-family: Arial;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <dialog open>
+        <div class="dialog-header">
+            <span class="bi bi-person-fill"> ASK DISHA </span>
+            <span class="bi bi-x"></span>
+        </div>
+        <div class="dialog-body">
+            <div class="dialog-title">Good Evening ! </div>
+            <div>How may I help you today?</div>
+        </div>
+    </dialog>
+</body>
+</html>
