@@ -1,0 +1,73 @@
+/*
+        Body Entities and Semantics
+- Developer can use various editors for designing HTML page.
+- Editor can't display the content exactly as defined in source code.
+- HTML provides various entities and semantics for presenting the content in body.
+
+1. line break     <br>
+2. blank space     &nbsp;  [non-breakable space]
+
+FAQ: What is difference between <br> & <br /> ?
+Ans:  There is no <br /> in HTML.
+          It is just developers markup for self ending elements [void] to supress warnings in editor.
+
+
+Syntax:
+    <body>
+            Line-1 <br> Line-2
+            Word &nbsp; &nbsp; Word
+    </body>
+
+3. pre-formated    <pre>
+
+4. code snippet    <code>
+
+5. variable        <var>
+
+6. large text    <big>
+
+7. smaller text    <small>
+
+8. sample text    <samp>
+
+*/
+
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        pre {
+            font-size: 20px;
+        }
+        var {
+            color:blue;
+        }
+        code {
+            color: rgb(174, 75, 92);
+        }
+        .note {
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="note">
+        Note: Create a function <samp><small>createHelloWorld()</small></samp> for printing <samp><small>"Hello World!"</small></samp>.
+    </div>
+    <pre>
+        <code>
+            <var><big>var</big></var> <small>createHelloWorld</small> = <var><big>function</big></var>() {
+   
+                return <var><big>function</big></var>(<small>...args</small>) {
+                   
+                }
+            };
+        </code>
+    </pre>
+</body>
+</html>
