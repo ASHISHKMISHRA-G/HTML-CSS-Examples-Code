@@ -1,0 +1,253 @@
+
+
+
+//Sample Leetcode page example
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leet Code</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        body {
+            background-color: rgb(236, 234, 234);
+        }
+        header {
+            background-color: rgb(236, 234, 234);
+            padding: 10px;
+            font-family: Arial;
+            font-size: 18px;
+            display: flex;
+            justify-content: space-between;
+        }
+        header span {
+            margin-left: 5px;
+        }
+        .run-bar span {
+            margin-left: 1px;
+        }
+        .logo {
+            background-color: white;
+            padding: 2px;
+            border-radius: 5px;
+            font-weight: bold;
+            color:goldenrod;
+        }
+        .bi-bug-fill {
+            background-color: rgb(201, 199, 199);
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .bi-play {
+            background-color: rgb(201, 199, 199);
+            padding: 5px;
+        }
+        .bi-cloud-upload {
+            background-color: rgb(201, 199, 199);
+            padding: 5px;
+            color:green;
+        }
+        .bi-file {
+            background-color: rgb(201, 199, 199);
+            padding: 5px;
+        }
+        .btn-premium {
+            background-color: rgb(255, 232, 198);
+            color: rgb(255, 145, 0);
+            padding: 5px;
+            font-size: 15px;
+            border-radius: 5px;
+        }
+        section {
+            margin-top: 15px;
+            height: 530px;
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            grid-gap: 10px;
+        }
+        .panel-left {
+            background-color: white;
+            border-radius: 5px;
+            font-family: Arial;
+           
+        }
+        .panel-right {
+            background-color: white;
+            border-radius: 5px;
+            color:green;
+        }
+        .left-header {
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            font-family: Arial;
+            font-size: 15px;
+            background-color: rgb(247, 246, 246);
+        }
+        .left-header span {
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        .description {
+            margin-top: 20px;
+            padding: 10px;
+            overflow: auto;
+            height: 450px;
+        }
+        .q1 {
+            font-family: Arial;
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .easy {
+            color:rgb(2, 204, 204);
+            font-family: Arial;
+            padding: 5px;
+            background-color: rgb(239, 237, 237);
+            border-radius: 10px;
+        }
+        .bi-lock-fill {
+            font-family: Arial;
+            padding: 5px;
+            background-color: rgb(239, 237, 237);
+            border-radius: 10px;
+        }
+        .summary {
+            width: 500px;
+            line-height: 30px;
+        }
+        .panel-left pre {
+            margin-left: -150px;
+            line-height: 25px;
+        }
+        .panel-right pre {
+            margin-left: -100px;
+            font-size: 18px;
+            color:gray;
+        }
+        var {
+            color:blue;
+        }
+        .comment {
+            color:green;
+            margin-left: 50px;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <span class="logo">JS</span>
+            <span> 30 days of JavaScript </span>
+            <span class="bi bi-chevron-left"></span>
+            <span class="bi bi-chevron-right"></span>
+            <span class="bi bi-shuffle"></span>
+        </div>
+        <div class="run-bar">
+            <span class="bi bi-bug-fill"></span>
+            <span class="bi bi-play"> Run </span>
+            <span class="bi bi-cloud-upload"> Submit</span>
+            <span class="bi bi-file"></span>
+        </div>
+        <div>
+            <span class="bi bi-ui-checks-grid"></span>
+            <span class="bi bi-gear"></span>
+            <span class="btn-submit">Register</span>
+            <span>or</span>
+            <span class="btn-register">Signin</span>
+            <span class="btn-premium">Premium</span>
+        </div>
+    </header>
+    <section>
+        <div class="panel-left">
+            <div class="left-header">
+                <div>
+                    <span class="bi bi-file-binary"> Description</span>
+                    <span class="bi bi-book"> Editorial</span>
+                    <span class="bi bi-funnel"> Solutions </span>
+                    <span class="bi bi-clock-history"> Submissions </span>
+                </div>
+                <div>
+                    <span class="bi bi-box"></span>
+                    <span class="bi bi-chevron-left"></span>
+                </div>
+            </div>
+            <div class="description">
+                <div class="q1">2667. Create Hello World Function</div>
+                <div>
+                    <span class="easy">Easy</span>
+                    <span class="bi bi-lock-fill"> Companies</span>
+                </div>
+                <br><br>
+                <div class="summary">Write a function <samp>createHelloWorld.</samp> It should return a new function that always returns <samp>"Hello World"</samp>.</div>
+                <br><br>
+                <div class="ex-1">
+                    <b>Example 1:</b>
+                    <pre>
+                       
+
+                        <big><b>Input:</b></big> args = []
+                        <big><b>Output:</b></big> "Hello World"
+                        const f = createHelloWorld();
+                        f(); // "Hello World"
+                    </pre>
+                    <div>
+                        <samp>
+                            The function returned by createHelloWorld should always return "Hello World".
+                        </samp>
+                    </div>
+                </div>
+
+                    <br><br>
+                <div class="ex-2">
+                    <b>Example 2:</b>
+                    <pre>
+                       
+
+                        <big><b>Input:</b></big> args = []
+                        <big><b>Output:</b></big> "Hello World"
+                        const f = createHelloWorld();
+                        f(); // "Hello World"
+                    </pre>
+                    <div>
+                        <samp>
+                            The function returned by createHelloWorld should always return "Hello World".
+                        </samp>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="panel-right">
+           <div class="code-sample">
+            <div class="comment">
+                /** <br>
+                * @return {Function} <br>
+                */
+            </div>
+            <pre>
+                <code>
+                    <var>var</var> createHelloWorld = <var>function</var>() {
+                        return <var>function</var>(...args) {
+                           
+                        }
+                    };
+                </code>
+            </pre>            
+              <div class="comment">
+                /** <br>
+                * const f = createHelloWorld(); <br>
+                * f(); // "Hello World"
+                */
+              </div>
+ 
+            </div>
+        </div>
+    </section>
+</body>
+</html>
