@@ -1,0 +1,72 @@
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .row {
+        display: grid;
+        grid-template-columns: 6fr 6fr;
+        margin-bottom: 10px;
+       }
+       .header {
+        font-weight: bold;
+       }
+       fieldset {
+        box-shadow: 5px 4px 2px black;
+        margin-bottom: 40px;
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+       }
+       legend {
+         width: 120px;
+         background-color: black;
+         color:white;
+         padding: 5px;
+         text-align: center;
+         box-shadow: 2px 2px 2px gray;
+         border-radius: 10px;
+       }
+    </style>
+</head>
+<body>
+     <h2 align="center">RESUME</h2>
+   
+        <fieldset>
+            <legend>Personal Details</legend>
+            <div class="row">
+                <div class="header"> First Name </div>
+                <div> Some name </div>
+             </div>
+             <div class="row">
+                <div class="header"> Last Name </div>
+                <div> Some name </div>
+             </div>
+             <div class="row">
+                <div class="header"> Fathers Name </div>
+                <div> Some name </div>
+             </div>
+        </fieldset>
+
+
+
+      <fieldset>
+        <legend>Contact Details</legend>
+        <div class="row">
+            <div class="header"> City </div>
+            <div> Some name </div>
+         </div>
+         <div class="row">
+            <div class="header"> State </div>
+            <div> Some name </div>
+         </div>
+         <div class="row">
+            <div class="header"> Postal Code </div>
+            <div> Some name </div>
+         </div>
+      </fieldset>
+</body>
+</html>
