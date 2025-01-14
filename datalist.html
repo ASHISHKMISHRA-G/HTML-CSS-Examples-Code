@@ -1,0 +1,46 @@
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        dt {
+            font-weight: bold;
+            background-color: lightgray;
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+        .control {
+            display: inline-block;
+            width: 200px;
+            height: 25px;
+            border:1px solid gray;
+        }
+        dl {
+            display: grid;
+            grid-template-columns: 3fr 9fr;
+        }
+        fieldset {
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <h2 align="center">Portfolio</h2>
+
+    <fieldset>
+        <legend>Personal Details</legend>
+        <dl>
+            <dt>First Name</dt>
+            <dd> <span class="control"></span> </dd>
+            <dt>Last Name</dt>
+            <dd> <span class="control"></span> </dd>
+            <dt>Fathers Name</dt>
+            <dd> <span class="control"></span> </dd>
+        </dl>
+    </fieldset>
+
+</body>
+</html>
