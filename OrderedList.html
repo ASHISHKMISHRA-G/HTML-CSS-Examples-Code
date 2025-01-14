@@ -1,3 +1,48 @@
+/*
+
+            Ordered  List
+
+- Ordered List sets auto numbering for a list of items.
+- List is defined with <ol>
+- Items are defined with <li>
+
+Syntax:
+    <ol>
+       <li> Item-1 </li>
+       <li> Item-2 </li>
+       <li> Item-3 </li>
+    </ol>
+
+- You can change the numbering style by using "type" attribute
+
+Syntax:
+    <ol type="1, A, a, i, I">
+
+- You can set start level number, to define from where the numbering have to start.
+
+Syntax:
+    <ol  type="1" start="5">
+    <ol  type="A" start="5">
+
+- You can reverse the numbering by using "reversed" attribute.
+
+Syntax:
+    <ol  type="1"  reversed>
+
+- You can create nested list, but make sure that the child list is inside <li> element.
+
+Syntax:
+    <ol>
+        <li> Item-1
+               <ol type="a">
+                 <li>Child-1</li>
+                 <li>Child-2</li>
+              </ol>
+         </li>
+    </ol>
+    
+*/    
+    
 Ex:
 <!DOCTYPE html>
 <html lang="en">
