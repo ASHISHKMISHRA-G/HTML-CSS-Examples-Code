@@ -1,0 +1,81 @@
+           Images in HTML
+- Images in computing system are of various types.
+- Web supports the following type of images
+
+Type      Description                 MIME        Extension
+-------------------------------------------------------------------------------------------------------------------------------------
+APNG     Animated Portable Network Graphics        image/apng    .apng
+
+PNG    Portable Network Graphics            image/png    .png
+
+JPEG    Joint Photographic Expert Group        image/jpeg    .jpg, .jpeg, .jfif
+
+GIF    Graphic Interchange Format            image/gif        .gif
+
+TIFF    Tagged Image File Format            image/tiff        .tiff
+
+BMP    Bitmap                    image/bmp    .bmp
+
+SVG    Scalar Vector Graphics            application/xml    .svg
+
+ICO    Microsoft Icon                images/icon    .ico
+
+Webp    Web Picture                application/webp    .webp
+
+FAQ: What is MIME?
+Ans:  Multipurpose Internet Mail Extensions.
+         Server and browser can understand the file type by using its MIME type.
+         A MIME comprises of several extensions.
+
+FAQ: What is the purpose of various image types?
+Ans:
+
+PNG & APNG
+- High resolution
+- More pixels
+- High Definition
+- More colors
+- Occupy more memory space.
+- APNG can be animated.
+- It is recommended to use PNG & APNG only for downloadable images.
+
+JPG
+- High resolution
+- More pixels
+- HD
+- More color
+- Compressed image format
+- It occupies less memory.
+- It is recommended for on screen presentation.
+- Can load faster than PNG
+
+GIF
+- Low resolution
+- Less pixels
+- Less colors
+- It supports only 256 colors.
+- Memory same as PNG not compressed.
+- It can be animated.
+- It is recommend to use GIF for bullets, icons, logos, background patterns, borders, buttons etc.
+
+TIFF
+- It is sliced image format.
+- It have high definition and colors.
+- It uses more memory than PNG.
+- Mostly used for scanned documents.
+
+Bitmap
+- It is binary format of image.
+- It is used to store images in database.
+
+SVG
+- It is vector graphics
+- It is not pixel based.
+- It uses XML as language.
+- Mostly used for architectural diagrams, maps, icons etc.
+
+Webp
+- It is web picture
+- It is a picture embedded into page.
+- It will not allow to separate image from page.
+- It is a secured image format embedded into page.
