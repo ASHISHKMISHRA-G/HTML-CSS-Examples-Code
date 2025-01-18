@@ -1,4 +1,56 @@
+/*
+                    Hyperlinks in HTML
+- Hyperlink is clickable text, picture or graphic that navigates the user from one location to another on web.
+- Hyperlink is configured by using <a> anchor element.
+- Hyperlinks are classified into 2 types
+    a) Intra Document Links
+    b) Inter Document Links
 
+Intra Document Links:
+- An intra document link navigates user from one location to another within the same page.
+- To configure intra document link you have to define an "Id" for target element.
+- You can access the "Id" by using "#" reference.
+- "Anchor" element uses "href" as attribute to refer the "id".
+- "Href" is used to set path. It sets a new path into the address bar by appending content into URL.
+
+Syntax:
+    <h3 id="fashion">
+    <img id="mobile">
+
+    <a href="#fashion">  Fashion </a>
+    <a href="#mobile">  Mobile </a>
+
+FAQ's:
+1. What is difference between "src" & "href"?
+A. "src" is a getter, used to get the path of any resource.
+    "href" is a setter, used to set the path for any resource.
+
+2. How to remove underline for hyperlink?
+A. By using CSS "text-decoration" set to "none".
+
+Syntax:
+    a {
+        text-decoration : none;
+    }
+
+3. How to change the color of visited and active links?
+A. By using HTML <body> attributes  "alink & vlink".
+    By using CSS classes  "visited & active".
+
+Syntax:
+    <body alink="red" vlink="gray">
+
+    a:visited {
+         color:gray;
+    }
+    a:active {
+          color:red;
+    }
+
+
+*/
+
+        
 Ex:
 <!DOCTYPE html>
 <html lang="en">
