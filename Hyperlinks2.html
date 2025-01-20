@@ -48,3 +48,53 @@ Ex:
    </div>
 </body>
 </html>
+
+
+
+        Link to JavaScript functions:
+- A hyperlink can access and use any JS function.
+- It requires href with "javascript" that point towards a function.
+
+Syntax:
+   <a href="javascript:functionName()">  Text  | Picture </a>
+
+Ex:
+   <a href="javascript:window.print()">  Print Page </a>
+
+FAQ's:
+1. How to open linked document or URL in a new tab?
+A. By using  <a>  "target" attribute set to "_blank".
+
+Syntax:
+   <a href="./images/kids-fashion.jpg"  target="_blank"> Kids </a>
+
+2. How to open linked document in a new window?
+A. By using Javascript function  "window.open()".
+
+Syntax:
+    <a href="javascript:window.open('path', 'title', 'features')">  Text | Image </a>
+
+Ex:
+  <a href="javascript:window.open('./images/men-fashion.jpg', 'Men', 'width=400 height=400')">
+           Men Fashion
+ </a>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+     <ol>
+        <li> <a href="./images/kids-fashion.jpg" target="_blank"> Kids Fashion </a> </li>
+        <li> <a href="https://www.amazon.in&quot; target="_blank"> Amazon </a> </li>
+        <li>
+            <a href="javascript:window.open('./images/men-fashion.jpg','Men','width=400 height=500')"> Men Fashion </a>
+        </li>
+     </ol>
+</body>
+</html>
