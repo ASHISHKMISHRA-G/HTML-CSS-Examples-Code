@@ -36,6 +36,47 @@ Form Attributes:
            <form method="get | post">
            </form>
 
+
+GET:
+- It can submit for fetching.
+- It can submit for saving.
+- It submits the data as "Query String".
+- Query String is appended into URL and displayed in address bar.
+- Everyone can view your data.
+- It is not safe.
+- It is easy to hack.
+- It can be bookmarked.
+- It is saved in browser logs. [history]
+- It can't submit complex data, binary type.
+- It have limit of max 2048 chars.
+- It can cache the data and save round trip.
+
+POST
+- It can submit for saving.
+- It submit data as "Form Body".
+- It is not saved in browser logs.
+- It is not displayed in address bar.
+- It can't be bookmarked.
+- It is safer than GET.
+- It can submit any complex data, i.e binary data.
+- There is no limit for data.
+- It can't cache the data.
+
+5. action        : It defines the target location for submitting data.
+          It is usually a server side page.
+
+        Syntax:
+         <form method="get"  action="page.html">
+        </form>
+
+6. novalidate    : It disables the default form validation. It is mostly used when developer
+          writes custom validation.
+
+         Syntax:
+           <form method="get"  novalidate>
+           </form>
+
+
            If a method is not defined then the default is "get".
 
 FAQ: Can we submit & save data by using GET method?
