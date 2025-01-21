@@ -1,0 +1,20 @@
+Forms in HTML    
+- Form provides an UI for interacting with data.
+- Data intraction includes operations like create, read, update and delete. [CRUD]
+- Form handles the interactions by using elements like
+    textbox
+    checkbox
+    radio
+    listbox
+    dropdownlist
+    buttons etc..
+
+The "Form" element:
+- Form is a generic container.
+- It have pre-defined functionality.
+- It can submit the data, reset the data and validate the data.
+
+Syntax:
+    <form>
+       ... form elements...
+    </form>
