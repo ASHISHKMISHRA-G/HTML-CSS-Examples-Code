@@ -18,3 +18,25 @@ Syntax:
     <form>
        ... form elements...
     </form>
+
+
+Form Attributes:
+1. id        ]
+2. name        ]  All are used for reference in CSS and JavaScript
+3. class        ]
+4. method        : It defines the action to be performed by form.
+          Form have 2 methods
+            a) GET
+            b) POST
+           
+          GET is used to submit so that we can fetch the data.
+          POST is used to submit so that we can save the data.
+
+          Syntax:
+           <form method="get | post">
+           </form>
+
+           If a method is not defined then the default is "get".
+
+FAQ: Can we submit & save data by using GET method?
+Ans: Yes. But it is not recommended.
