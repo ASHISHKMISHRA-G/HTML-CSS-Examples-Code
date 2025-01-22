@@ -1,4 +1,5 @@
-           Textbox
+/*
+                      Textbox
 - It is used to view, edit and input a string.
 - String is a set of chars which includes alphabet, number and special chars.
 - HTML <input> element is used for various types of inputs.
@@ -73,3 +74,39 @@ Syntax:
      ....
     </datalist>
 
+*/
+
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <dl>
+            <dt>User Name</dt>
+            <dd><input type="text" required minlength="4" maxlength="14"  autofocus name="UserName" placeholder="Name is required"></dd>
+            <dt>OTP</dt>
+            <dd><input type="text" required minlength="4" maxlength="4" name="OTP" size="4" placeholder="4 Chars"></dd>
+            <dt>Course</dt>
+            <dd>
+              <input type="text" name="Course" list="courses">
+              <datalist id="courses">
+                  <option>HTML</option>
+                  <option>CSS</option>
+                  <option>JavaScript</option>
+                  <option>Java</option>
+                  <option>UI Fullstack</option>
+                  <option>Java FullStack</option>
+                  <option>.NET FullStack</option>
+              </datalist>    
+            </dd>
+        </dl>
+        <button>Submit</button>
+    </form>
+</body>
+</html>
