@@ -1,0 +1,31 @@
+           Textbox
+- It is used to view, edit and input a string.
+- String is a set of chars which includes alphabet, number and special chars.
+- HTML <input> element is used for various types of inputs.
+- To input string you have to set "type" as "text".
+
+Syntax:
+    <input type="text">
+
+Attributes:
+1. id    ]
+2. name    ]  used for refering textbox in CSS & JavaScript
+3. class    ]
+
+Note: A form can't submit the value of any element if "name" is not defined.
+          It is mandatory that every element in form must have a name.
+
+    <input type="text"  name="UserName">
+
+4. value    : It defines the value to display in textbox.
+
+    <input type="text" name="UserName"  value="John">
+
+5. readonly : It will not allow to modify the value but it can submit the value.
+
+    <input type="text" name="UserName" value="John" readonly>
+
+6. disabled:  It will not allow to modify & submit. It can just display value.
+
+    <input type="text" name="UserName" value="John" disabled>
+    <input disabled name="UserName"  value="John" type="text">
