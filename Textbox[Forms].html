@@ -129,4 +129,33 @@ Ex:
        
             Syntax:
             pattern="colou*r"    => color, colour, colouur, colouuur...
-*/
+
+        
+
+          Meta Character        Description
+-------------------------------------------------------------------------------------------------------------------------
+     ?            Zero or one occurrence of a character
+     *            Zero or more occurrence of character
+     +            One or more occurrence of a character.
+    
+                Syntax:
+                  pattern="colou+r"     => colour, colouur, colouuur,...
+    
+     . (dot)            It refers to any single character. [a-z,A-Z,0-9,!@#$%^&*]
+    
+                Syntax:
+                  pattern=".at"      => cat, bat, $at, 2at,..
+    
+    
+     | (pipe)            It refers to set of chars or strings. It allows multiple.
+    
+                Syntax:
+                 pattern="red|blue|green"  
+    
+    \            It is escape sequence character. It converts the meta character
+                into normal character and vice versa.
+    
+                Syntax:
+                pattern="gmail\.com"        => gmail.com
+                pattern="\+91"        => +91
+    */
