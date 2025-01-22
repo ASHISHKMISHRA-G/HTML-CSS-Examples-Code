@@ -199,7 +199,7 @@ Ex:
                 pattern="\d\d"    => 34, 66, 68
                 pattern="\d\D"    => 3A, 3a, 3$
     
-    \w            It refers to word chars. [a-z, A-Z, 0-9, _ ]
+    \w            It refers to the word chars. [a-z, A-Z, 0-9, _ ]
     
     \W            It refers to non-word chars. Only special chars other than _.
     
@@ -221,5 +221,52 @@ Ex:
      {n, m}            {4, 10}  Between 4 to 10.
     
      {n,  }            {4,  }   Minimum 4 and maximum any.
+
+
+Syntax:
+    pattern="\d{10}"        => a 10 digit number
+    pattern="\w{4,10}"        => any word with alphabet, number and _ between
+                     4 to 10 chars.
+
+Query: Write a pattern to validate the mobile numbers starting with +91 and having a 10-digit number.
+
+    pattern="\+91\d{10}"
+    pattern="\+91[0-9]{10}"
+
+Query: Write a pattern for a user name alphanumeric between 4 to 15 chars.
+
+    pattern="[a-z,A-Z,0-9]{4,15}"
+
+Query: Write a pattern for the IFSC Code
+        SBI0000543
+        HDFC0000456
+       
+        Start with        => SBI or HDFC
+        contain        => 0000
+        End with        => 3 digits number
+
+    pattern="[SBI|HDFC]0000\d{3}"
+
+Query: Write a pattern to validate the US mobile format
+
+    +(1)(425) 555-0100
+    +(1)(000) 000-0000
+
+    pattern="\+\(1\)\(\d{3}\)\s\d{3}-\d{4}"
+
+Query: Write pa attern to validate the UK Mobile format
+   
+    +(44)(20) 1234 5678
+    +(44)(00) 0000 0000
+
+    pattern="\+\(44\)\(\d{2}\)\s\d{4}\s\d{4}"
+
+Pre-defined Expression:
+
+    (?=.*[A-Z])        at least one upper-case letter
+    (?=.*[a-z])        at least one lowercase letter
+    (?=.*[0-9])        at least one number.
+    (?=.*[!@#$%])    at least one special character.
+
 
     */
