@@ -29,3 +29,47 @@ Note: A form can't submit the value of any element if "name" is not defined.
 
     <input type="text" name="UserName" value="John" disabled>
     <input disabled name="UserName"  value="John" type="text">
+
+7. size    : It sets width for textbox, the default width is 20.
+      It is not limit, it is just width of textbox.
+
+     <input type="text" name="OTP" size="4">
+
+8. placeholder : It defines the watermark text to display in textbox.
+             It is displayed only when value is not defined.
+
+     <input type="text" name="UserName" placeholder="Name is required">
+
+9. autofocus  : It sets focus to the element automatically on page load.
+           You can set focus to any one element in form.
+
+      <input type="text" name="UserName" autofocus>
+
+10. maxlength : It limits the maximum number of characters in textbox.
+
+      <input type="text" name="UserName" maxlength="14">
+      <input type="text" name="OTP" maxlength="4">
+
+11. minlength : It validates the minimum number of characters in textbox.
+   
+      <input type="text" minlength="4" maxlength="14">
+      <input type="text" name="OTP" minlength="4" maxlength="4">
+
+12. required  : It is a validation which ensures that field is not empty.
+          It is used to configure mandatory fields in a form.
+
+      <input type="text" minlength="4" maxlength="4" name="OTP" required>
+
+13. list       : It is used to configure a datalist.
+         Datalist is displayed as auto complete text.
+         Datalist is designed by using the elements:
+        <datalist>
+        <option>
+Syntax:
+    <input type="text" name="course"  list="courses">
+    <datalist id="courses">
+     <option> Java </option>
+     <option> JavaScript </option>
+     ....
+    </datalist>
+
