@@ -158,4 +158,68 @@ Ex:
                 Syntax:
                 pattern="gmail\.com"        => gmail.com
                 pattern="\+91"        => +91
+
+
+   [ ]            It defines a set or range of characters.
+           
+            [a-z]    All lower case letters
+            [A-Z]    All uppercase letters
+            [a-z,A-Z]    Both upper case and lower case
+            [a-d,A-M]    Any character with in specified range
+            [a,d,s]    Only specified chars allowed
+            [0-9]    Only numeric allowed
+            [4-9]    Only specified numbers range allowed
+            [2,4,9]    Only specified numbers allowed
+            [!@#$]    Only specified special chars allowed
+           
+            Syntax:
+            pattern="[a-z,A-Z][0-9]"    => a5, B4
+
+    [^ ]            It excludes the specified.
+    
+                [^a-z]    only a-z not allowed all others allowed.
+                [^a,d,s]    only specified chars not allowed.
+                [^0-5]    only specified numbers not allowed.
+           
+                Syntax:
+                pattern="[^a-z, A-Z]"        => only number & special chars
+    
+    \^            Starts with
+    
+    $            Ends with
+    
+                Syntax:
+                pattern="\^ expression $"
+    
+    \d            It refers to all numbers [0-9]
+    
+    \D            It refers to non-numeric, all other than numbers.
+    
+                Syntax:
+                pattern="\d\d"    => 34, 66, 68
+                pattern="\d\D"    => 3A, 3a, 3$
+    
+    \w            It refers to word chars. [a-z, A-Z, 0-9, _ ]
+    
+    \W            It refers to non-word chars. Only special chars other than _.
+    
+                Syntax:
+                pattern="\W\w"    => $a, $2, $_,  $A
+    
+    \s            It refers to blank space.
+    
+                Syntax:
+                pattern="\d\s\W"    => 2 $,  8 @,
+    
+    (  )            It is used to define a union for expression.
+
+
+    Quantifer            Description
+    --------------------------------------------------------------------------------------------
+     { n }            {4}  Exactly specified number of chars allowed.
+    
+     {n, m}            {4, 10}  Between 4 to 10.
+    
+     {n,  }            {4,  }   Minimum 4 and maximum any.
+
     */
