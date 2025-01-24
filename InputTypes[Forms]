@@ -70,3 +70,39 @@ Syntax:
   <input type="month">
   <input type="datetime-local">
   <input type="week">
+
+File Input
+
+- It is a file picker, which allows to browse and select files from your PC.
+- It is not a file uploader. It is just a browser.
+- You can set filter for specific type of files by using "accept" attribute.
+
+Syntax:
+   <input type="file" accept=".jpg"  name="photo">
+   <input type="file" accept=".jpg,.png,.gif" name="photo">
+
+- You can select only one file by default. If you want the user to choose more than one file, then you can define "multiple" attribute.
+
+Syntax:
+  <input type="file" name="photos" multiple>
+
+                      Radio Buttons
+- Radio allows to select one or multiple options from a group of choices.
+- However radio will not allow to deselect the selected option.
+- Hence it is used with "Mutex" mechanism [Mutual Exclusion].
+- You can configure mutex by defining same name for all radios in a category.
+
+Syntax:
+    <input type="radio" name="gender"> Male
+    <input type="radio" name="gender"> Female
+
+- If you want any one selected by default then you can defined "checked" attribute.
+
+    <input type="radio" name="gender" checked> Male
+
+- The default radio submits "ON" as value.
+- Hence you have to define a value for every radio.
+
+Syntax:
+    <input type="radio" name="gender" value="Male"> Male
+    <input type="radio" name="gender" value="Female"> Female
