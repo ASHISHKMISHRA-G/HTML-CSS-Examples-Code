@@ -15,3 +15,28 @@ Syntax:
 
 Syntax:
  <input type="number" name="rate" min="10.45" max="18.45" value="10.45" step="0.01">
+
+
+                  Range Input
+- It is similar to number input.
+- It comprises of a slider to select value.
+- It uses min, max and step.
+
+Syntax:
+ <input type="range"  name="rate" min="10.45" max="18.45" step="0.01" value="10.45">
+
+                 Color Input
+- It shows a color picker.
+- It allows to select a color.
+- It uses 6 chars hexadecimal code.
+
+Syntax:
+ <input type="color"  name="color" value="#ff00ff">
+
+                Email Input
+- It is similar to textbox with attributes.
+- It validates email format.
+- It will not allow normal string format. It must have "@" in string.
+
+Syntax:
+ <input type="email"  name="email"  required  placeholder="Your email address">
