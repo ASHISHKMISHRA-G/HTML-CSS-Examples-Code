@@ -40,3 +40,33 @@ Syntax:
 
 Syntax:
  <input type="email"  name="email"  required  placeholder="Your email address">
+
+
+URL Input
+- It validates URL.
+- URL must have protocol and domain.
+
+    www.amazon.in        // invalid
+    https://www.amazon.in    // valid
+
+Syntax:
+ <input type="url" name="URL"  placeholder="Your website address" required>
+
+                 Date & Time Input
+- HTML provides various types for data and time values.
+    a) date
+    b) time
+    c) datetime-local
+    d) week
+    e) month
+    f)  year [obsolete]
+    g) datetime [obsolete]
+- You can't select a range of dates.
+- You can restrict the date range by using "min" and "max" attributes.
+- Date format is always  "year-month-day" for developer.
+
+Syntax:
+  <input type="date" min="2024-11-01"  max="2024-11-18">
+  <input type="month">
+  <input type="datetime-local">
+  <input type="week">
