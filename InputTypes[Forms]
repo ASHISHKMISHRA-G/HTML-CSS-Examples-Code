@@ -1,0 +1,17 @@
+Password Input
+- Password is a string masked with "*"
+- All attributes are same as textbox.
+
+Syntax:
+       <input type="password"  name="password" required  minlength="4" maxlength="14"  placeholder="Password 4 to 14 chars"  pattern="\w{4,14}">
+
+
+                    Number Input
+- It allows input of numeric type values.
+- You can limit the number by using
+    a) min
+    b) max
+    c) step
+
+Syntax:
+ <input type="number" name="rate" min="10.45" max="18.45" value="10.45" step="0.01">
