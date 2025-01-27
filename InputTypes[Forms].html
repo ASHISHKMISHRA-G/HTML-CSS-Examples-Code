@@ -302,4 +302,84 @@ Syntax:
 Syntax:
     <textarea rows="4" cols="40" disabled> Text </textarea>
 
+*/
+
+       
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+    </style>
+</head>
+<body>
+    <form>
+        <dl>
+            <dt>Your Name</dt>
+            <dd><input type="text"></dd>
+            <dt>Your Comments</dt>
+            <dd>
+                <textarea rows="4" cols="40"></textarea>
+            </dd>
+            <dt>Terms of Service</dt>
+            <dd>
+                <textarea disabled rows="4" cols="40"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, numquam dolorum. Tempora quam aperiam quidem sint quod amet consequuntur officiis explicabo minima est, adipisci optio debitis ducimus pariatur distinctio vitae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias error distinctio accusantium, modi in nam tempora repellendus magnam consequuntur quibusdam molestiae placeat aliquam, sunt accusamus unde sit! Ducimus, eos exercitationem. </textarea>
+            </dd>
+            <dd>
+                <input type="checkbox"> <label> I Accept </label>
+            </dd>
+        </dl>
+    </form>
+</body>
+</html>
+
+/*
+
+                         Meter
+- It is used to display a grade meter.
+- Meter value is controlled dynamically using script.
+- Meter provides attributes
+    a) min
+    b) max
+    c) value
+    d) low
+    e) high
+
+Syntax:
+  <meter min="1" max="100"  value="100"  low="40" high="80"> </meter>  Gold
+  <meter min="1" max="100"  value="100"  low="60" high="80"> </meter> Red
+  <meter min="1" max="100" value="100" low="0" high="0"> </meter> Green
+
+*/
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        meter {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+       <dl>
+          <dd> 5 <span class="bi bi-star-fill"></span> <meter min="1" value="100" max="100"></meter> <span>1,45,660</span> </dd>
+          <dd> 4 <span class="bi bi-star-fill"></span> <meter min="1" value="20" max="100"></meter> <span>1,660</span> </dd>
+          <dd> 2 <span class="bi bi-star-fill"></span> <meter min="1" low="40" high="80" value="100" max="100"></meter> <span>660</span> </dd>
+          <dd> 1 <span class="bi bi-star-fill"></span> <meter min="1" low="60" high="80" value="100" max="100"></meter> <span>660</span> </dd>
+       </dl>
+    </form>
+</body>
+</html>
+
 
