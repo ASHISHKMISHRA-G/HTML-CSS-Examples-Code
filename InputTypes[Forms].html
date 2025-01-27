@@ -211,6 +211,9 @@ Ex: Textbox without border and outline
 </body>
 </html>
 
+
+
+
 /*
                             Dropdown
 - It enables the user to select any one option from a group of choices.
@@ -236,5 +239,67 @@ Syntax:
 Syntax:
     <option value="MOB11"  selected> Mobile </option>
     <option value="Watch" disabled> Watch </option>
+
+*/
+       
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+    </style>
+</head>
+<body>
+    <form>
+        <label for="Product">Select Product</label>
+        <div>
+           
+            <select name="Product">
+                <option>Choose Product</option>
+                <optgroup label="Electronics">
+                    <option> Televisions </option>
+                    <option value="ELEMOB110"> Mobiles </option>
+                    <option disabled> Watches </option>
+                </optgroup>
+                <optgroup label="Footwear">
+                    <option>Sneakers</option>
+                    <option selected>Boots</option>
+                    <option>Casuals</option>
+                </optgroup>
+            </select>
+            <button>Submit</button>
+        </div>
+    </form>
+</body>
+</html>
+
+
+/*
+                            ListBox
+- Listbox allows user to select one or multiple from a group choices.
+- A dropdown is transformed into listbox by using the attributes.
+    a) size
+    b) multiple
+
+Syntax:
+    <select size="3" multiple>
+       .... your options....
+    </select>
+
+                      Textarea
+- It is used for multiline text.
+- It allows to wrap text into multiple line.
+
+Syntax:
+    <textarea  rows="4" cols="40"> your text is optional </textarea>
+
+- You can use textbox attributes like readonly, required, disabled, maxlength, minlength etc.
+
+Syntax:
+    <textarea rows="4" cols="40" disabled> Text </textarea>
 
 
