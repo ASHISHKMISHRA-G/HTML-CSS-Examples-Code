@@ -134,3 +134,53 @@ Ex:
     </form>
 </body>
 </html>
+
+
+/*
+                  Checkbox
+- It enables the user to select or deselect any option.
+- It allows user to select one or multiple options from a group of choices.
+
+Syntax:
+  <input type="checkbox"  name="course"  value="UI Fullstack">  UI Fullstack
+
+                      Label
+- A label is used to display titles and captions for any element.
+- It can bind with elements using "for" attribute.
+
+Syntax:
+  <input type="checkbox"  name="course"  value="UI FullStack"> <label for="course"> UI </label>
+
+- If value is not defined then checkbox submit "ON" as value.
+- If you want a checkbox selected then you can define "checked".
+
+*/
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <dl>
+           <dt>Gender</dt>
+           <dd>
+            <input type="radio" value="Male" name="gender" checked> <label for="gender">Male</label>
+            <input type="radio" value="Female" name="gender"> <label for="gender">Female</label>
+           </dd>
+           <dt>Courses</dt>
+           <dd>
+             <input type="checkbox" name="Course" value="Java"> <label for="Course">Java</label>
+             <br>
+             <input type="checkbox" name="Course" value="UI Fullstack"> <label for="Course">UI Fullstack</label>
+           </dd>
+        </dl>
+        <button>Submit</button>
+    </form>
+</body>
+</html>
+
