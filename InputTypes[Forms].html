@@ -184,3 +184,57 @@ Ex:
 </body>
 </html>
 
+
+Ex: Textbox without border and outline
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .UserName, .Password {
+            border-left: none;
+            border-top: none;
+            border-right: none;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" class="UserName" placeholder="User Name">
+        <br><br>
+        <input type="password" class="Password" placeholder="Password">
+    </form>
+</body>
+</html>
+
+/*
+                            Dropdown
+- It enables the user to select any one option from a group of choices.
+- It is defined by using <select> element.
+- It comprises of choices defined with <option> element.
+- You can group options by using <optgroup> element with a label.
+- Every option is an RC type, it will not allow complex formats and icons or images.
+- It is only for alpha numeric and special chars.
+
+Syntax:
+    <select name="list">
+       <optgroup label="category">
+          <option> Text </option>
+          <option> Text </option>
+      </optgroup>
+    </select>
+
+- Every option have 3 attributes
+    a) value        : It specifies the value to submit
+    b) selected    : It selects the option automatically on page load
+    c) disabled    : It will not allow to select any option.
+
+Syntax:
+    <option value="MOB11"  selected> Mobile </option>
+    <option value="Watch" disabled> Watch </option>
+
+
