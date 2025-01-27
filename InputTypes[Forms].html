@@ -383,3 +383,105 @@ Ex:
 </html>
 
 
+/*
+       
+                     Progress
+- It is used to show the status of any task performed in page such as downloading, installing, copying etc..
+- Attributes
+    a)min
+    b)max
+    c)value
+
+Syntax:
+    <progress min="1" max="100" value="20"> </progress>
+
+*/
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        progress {
+            width: 200px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+       <dl>
+          <dt>Preparing for Download</dt>
+          <dd>
+            <progress></progress>
+          </dd>
+          <dt>20% Completed</dt>
+          <dd>
+            <progress min="1" max="100" value="20"></progress>
+          </dd>
+          <dt>80% Completed</dt>
+          <dd>
+            <progress min="1" max="100" value="80"></progress>
+          </dd>
+       </dl>
+    </form>
+</body>
+</html>
+       
+
+/*
+       
+              Buttons
+- Buttons are used to confirm the user action.
+- HTML buttons are categorized into 2 groups
+    a) Generic Buttons
+    b) Non Generic Buttons
+- Generic buttons have pre-defined functionality.
+
+    HTML 4:
+        <input type="submit">
+        <input type="reset">
+
+    HTML 5:
+        <button type="submit"> Text | Image | Icons </button>
+        <button type="reset"> Text | Image | Icons </button>
+
+- Non Generic button don't have pre-defined functionality.
+
+    HTML 4
+        <input type="button">
+    HTML 5
+        <button type="button"> Text | Image | Icons </button>
+
+Note: If button type is not defined for HTML 5 <button> then by default it is submit.
+
+*/
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+     
+    </style>
+</head>
+<body>
+    <form>
+       User Name :
+       <input type="text" name="UserName">
+       <input type="submit" value="Register">
+       <button type="submit"> <span class="bi bi-person-fill"> Register</span> </button>
+       <input type="reset" value="Cancel">  
+       <button type="reset"> <img src="../public/images/a1.jpg" width="20" height="30"> Reset </button>
+    </form>
+</body>
+</html>
+
