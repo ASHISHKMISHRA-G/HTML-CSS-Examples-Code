@@ -14,3 +14,44 @@ CSS Form Classes
     :hover        It defines format when mouse is over the element.
     :active        It defines format when mouse is down over element.
     :visited        It sets color for link when visited
+
+
+Ex: Focus
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+         .UserName+div {
+            display: none;
+         }
+         .UserName:focus+div {
+            display: block;
+            color:red;
+            font-size: 13px;
+         }
+         .UserName:focus {
+            border:1px solid red;
+            box-shadow: 2px 2px 2px red;
+            outline: none;
+            border-radius: 5px;
+            padding: 5px;
+         }
+    </style>
+   
+</head>
+<body>
+    <form>
+        <dl>
+            <dt>User Name</dt>
+            <dd>
+                <input type="text" class="UserName" placeholder="Name Min 4 Chars" value="John">
+                <div>User Name min 4 chars</div>
+            </dd>
+        </dl>
+    </form>
+</body>
+</html>
