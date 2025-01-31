@@ -1,4 +1,5 @@
-CSS Form Classes
+/*
+        CSS Form Classes
 - Class is a program template.
 - Class provides pre-defined data and logic, which you can customize and implement according to the requirement.
 - You can inherit the class and configure additional formats.
@@ -14,6 +15,8 @@ CSS Form Classes
     :hover        It defines format when mouse is over the element.
     :active        It defines format when mouse is down over element.
     :visited        It sets color for link when visited
+
+*/
 
 
 Ex: Focus
@@ -168,5 +171,97 @@ Ex: Visited, Active, Hover
     <a href="./shopper-template.html"> Shopper </a>
     <br> <br>
     <img src="../public/images/women-fashion.jpg" width="100" height="100">
+</body>
+</html>
+
+
+/*
+
+2. Validation State Classes
+
+    :required        It configures format for element when defined with required.
+    :optional        It sets formats when element is not defined with required.
+    :in-range        It sets formats when value is in the range of specified.
+    :out-of-range    It sets formats when value is not in range.
+    :valid        It sets format when state is valid for element.
+    :invalid        It sets format when validation fails for element.
+
+*/
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        input+span {
+            display: none;
+        }
+        input:required+span {
+            display: inline;
+            color:red;
+            font-size: 12px;
+        }
+        input:required {
+            border:1px solid red;
+        }
+        input {
+            outline: none;
+        }
+        input:valid+span {
+            display: none;
+        }
+        input:invalid+span {
+            display: inline;
+        }
+        input:valid {
+            border:1px solid green;
+        }
+        input:invalid {
+            border:1px solid red;
+        }
+        .age:in-range~div {
+            display: none;
+        }
+        .age:out-of-range~div {
+            display: block;
+            color:red;
+            font-size: 12px;
+        }
+        .mobile:invalid+div {
+            display: block;
+            color:red;
+            font-size: 12px;
+        }
+        .mobile:valid+div {
+            display: none;
+        }
+    </style>
+   
+</head>
+<body>
+    <form>
+        <dl>
+            <dt>User Name</dt>
+            <dd><input required type="text"> <span>*</span> </dd>
+            <dt>Password</dt>
+            <dd><input required type="password"> <span>*</span></dd>
+            <dt>Email</dt>
+            <dd><input type="email"> <span>*</span></dd>
+            <dt>Mobile</dt>
+            <dd>
+                <input type="text" class="mobile" pattern="\+91\d{10}">
+                <div>Invalid Mobile : +91 10 digits required</div>
+            </dd>
+            <dt>Age</dt>
+            <dd><input required  min="15" max="30" class="age" type="number" > <span>*</span>
+                <div>Age 15 to 30 only</div>
+            </dd>
+        </dl>
+        <button>Register</button>
+    </form>
 </body>
 </html>
