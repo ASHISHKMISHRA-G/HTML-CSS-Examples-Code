@@ -1,0 +1,16 @@
+CSS Form Classes
+- Class is a program template.
+- Class provides pre-defined data and logic, which you can customize and implement according to the requirement.
+- You can inherit the class and configure additional formats.
+- CSS provides various types of class for formatting HTML elements.
+- Most commonly used classes for Form elements are:
+
+1. Element State Classes
+
+    :focus        It defines styles when element gets focus.
+    :read-only        It sets format to element when it is configure with readonly.
+    :disabled        It sets format when element is disabled.
+    :checked        It formats radio or checkbox when the state is checked.
+    :hover        It defines format when mouse is over the element.
+    :active        It defines format when mouse is down over element.
+    :visited        It sets color for link when visited
