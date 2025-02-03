@@ -1,0 +1,93 @@
+/*
+              HTML Tables
+- Table arranges data in rows and columns.
+- HTML 5 tables are designed by using following elements
+
+    <table>            Start and end of table
+    <caption>            Caption to make table SEO friendly
+    <thead>            Header Section
+    <tbody>            Body
+    <tfoot>            Footer Section
+    <tr>            Row
+    <th>            Heading Cell
+    <td>            Normal Cell [table data]
+    <colgroup>        Column Group to highlight columns
+
+*/
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        .player-details {
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+        }
+        .player-title {
+            font-size: 30px;
+            font-weight: bold;
+        }
+        table {
+            font-family: Arial;
+        }
+        .player-name {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .c-name {
+            font-size: 26px;
+        }
+    </style>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container-fluid">
+    <table class="table table-hover table-striped mt-4 table-dark caption-top">
+        <caption>Men's test All-Rounder Rankings</caption>
+        <thead>
+            <tr>
+                <th>Pos</th>
+                <th>Team</th>
+                <th>Players</th>
+                <th>Rating</th>
+                <th>Career Best Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>01 <span class="bi bi-circle-fill"></span> </td>
+                <td> <img src="../public/images/india.png" width="30"> <span class="c-name">IND</span> </td>
+                <td>
+                   <div class="player-details">
+                    <div class="player-name"> <div><span>Ravindra</span> <div class="player-title">JADEJA</div></div> </div>
+                    <div> <img src="../public/images/jadeja.png" width="100"> </div>
+                   </div>
+                </td>
+                <td>
+                    432
+                </td>
+                <td>475 v Bangladesh at Chennai 2024</td>
+            </tr>
+            <tr>
+                <td>02 <span class="bi bi-circle-fill"></span> </td>
+                <td>  
+                    <img src="../public/images/india.png" width="30"> <span class="c-name">IND</span>
+                </td>
+                <td>
+                    Ravichandran ASHWIN
+                </td>
+                <td>296</td>
+                <td>492 v England at Mohali 2016</td>
+            </tr>
+        </tbody>
+        <tfoot>
+
+        </tfoot>
+    </table>
+</body>
+</html>
