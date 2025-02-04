@@ -1,0 +1,29 @@
+/*
+  Table Attributes:
+1. Frame, Rules & Border
+
+    Frame     : It sets a frame for table. The values are:
+           "box, rhs, lhs, above, below, void".
+
+           <table frame="box | void | rhs ..">
+   
+    Rules    : Rules are set for row, columns and groups. The values are:
+          "rows, cols, groups, none, all".
+       
+           <table rules="all | groups | rows | cols..">
+
+    Border    : It sets border for cells. It can have 2 values.    
+            0 => No border [false]
+            1 => Border [true]
+
+           <table border="0 | 1">
+
+    Note: You can't set border when rules attribute is defined.
+              You have to remove rules attribute to apply border.
+
+2. Cellspacing & Cellpadding
+
+    cellspacing    It sets space between cells.
+    cellpadding    It sets space beween border and content inside cell.
+
+    <table cellspacing="10" cellpadding="5" border="1">
