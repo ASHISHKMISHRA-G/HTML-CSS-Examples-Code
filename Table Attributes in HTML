@@ -27,3 +27,33 @@
     cellpadding    It sets space beween border and content inside cell.
 
     <table cellspacing="10" cellpadding="5" border="1">
+
+3. Width & Height
+
+    width        It is defined for <th> or <td>
+    height        It is defined for <tr>
+
+    <tr height="100">
+    <th width="50">
+    <table width="100%">    // table doesn't have height property
+
+4. Align & Valign
+
+    align        It sets alignment left, center, right or justify.
+    valign        It sets vertical top, center, bottom.
+
+     Note: Alignment can be defined by row or by cell, Not by column.
+
+    <tr align="center" valign="top">
+    <td align="right" valign="bottom">
+
+5. BgColor & Background
+
+    bgcolor        It set background color for table, group or cell.
+    background    It sets background image for table, group, row or cell.
+
+    <table bgcolor="yellow">
+    <tr bgcolor="red">
+    <td bgcolor="#00ff00">
+    <table background="../public/images/pic.jpg">
+
