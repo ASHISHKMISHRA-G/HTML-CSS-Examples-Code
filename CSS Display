@@ -1,0 +1,216 @@
+                  CSS Display
+
+1. none            : It hides element from page and removes the allocated space for
+                  element in page.
+
+FAQ: What is difference between "display:none" & "visibility:hidden" ?
+Ans:  "Visibility : Hidden" will keep the allocated space for element.
+     "Display : None" will remove the allocated space when hidden.
+
+Syntax:
+        img {                    img {
+            display: none;                  visibility : hidden;
+        }                        }
+
+
+2. Inline        :  It allows to keep any content in the same line of specified element.
+               It will not allow to control the dimensions of element.
+
+3. Block        :  It will not allow to keep any content in the same line.
+               It wraps other content to next line.
+               It allows to control the dimensions of element.
+
+4. Inline Block    : It keeps element in the same line and allows to change the dimensions.
+
+
+5. Flex        : It is used for a container that have set of elements.
+              It is used for arranging container elements in row or column.
+
+6. Flex Direction:  It controls the direction of elements in container by row or column.
+                  The default is row.
+
+7. Justify Content:  If flex direction is row then justify content can have
+                    a) baseline    : left             ]
+                    b) end        : right        ]  all items in container
+                    c) center        : center        ]    
+
+                    d) space-between            ]
+                    e) space-around            ]    horizontally justify
+                    f) space-evenly            ]
+           
+                If flex direction is column the justify content can have
+                    a) baseline    : top            ]
+                    b) end        : bottom        ] all items
+                    c) center        : center        ]
+
+                    d) space-between            ]
+                    e) space-around            ] vertical justify
+                    f) space-evenly            ]
+
+
+8. Align Items        :  It aligns all flexible items left, center, right or top, center, bottom.
+                   If align items is no defined the elements in container will adjust
+                   their width and height according to the container.
+                   [100% of container]
+
+
+9. Flex Warp        : If there are many items in a flex-box they try to adjust the width
+                  in order fit into box.
+                  Flex wrap allows the elements to warp into next line.
+                  [wrap / no-wrap]
+
+                 Syntax:
+                    main {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap : wrap;
+                         justify-content: space-between;
+                    }
+
+Note: Flex provides row-reverse and column-reverse directions to keep the latest at top.
+
+
+
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       ul {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          list-style:none;
+          border: 1px solid black;
+          padding: 10px;
+          height: 500px;
+          align-items: center;
+       }
+       li {
+         background-color: black;
+         color:white;
+         width: 70px;
+         margin: 5px;
+         padding: 5px;
+         text-align: center;
+       }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Home</li>
+        <li>Shop</li>
+        <li>Pages</li>
+        <li>Blog</li>
+        <li>Docs</li>
+    </ul>
+</body>
+</html>
+
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style: none;
+            font-size: 20px;
+        }
+        li {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: black;
+            color:white;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Table of Contents</h2>
+    <ul>
+        <li> <span>HTML</span> <span>1</span> </li>
+        <li> <span>CSS</span> <span>3</span> </li>
+        <li> <span>JavaScript</span> <span>5</span> </li>
+        <li> <span>React</span> <span>8</span> </li>
+    </ul>
+</body>
+</html>
+
+
+
+10. Grid            : It arranges content into rows and columns.
+11. Grid Row        : It defines the element position in rows.
+12. Grid Column    : It defines the element position in columns.
+13. Gird Gap        : It sets space between rows and columns in grid.
+14. Grid Template Columns : It splits the grid into multiple columns. [fractions]
+
+
+Syntax:
+        {
+         display : grid;
+         grid-template-columns: 2fr 10fr;
+        }
+
+        row {                column {
+           grid-row : 1;               grid-column:1;
+           grid-row : 1/4;           grid-column:1/4;
+        }                    }
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header, nav, main, aside, footer {
+            border:1px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+        body {
+            display: grid;
+            grid-template-columns: 2fr 8fr 2fr;
+        }
+        header {
+            grid-row: 1;
+            grid-column: 1/4;
+        }
+        main {
+            height: 400px;
+            grid-row: 2;
+            grid-column: 2;
+        }
+        nav {
+            grid-row: 2;
+            grid-column: 1;
+        }
+        aside {
+            grid-row: 2;
+            grid-column: 3;
+        }
+        footer {
+            grid-row: 3;
+            grid-column: 1/4;
+        }
+    </style>
+</head>
+<body>
+    <header>Header</header>
+    <nav>Nav</nav>
+    <main>Main</main>
+    <aside>Aside</aside>
+    <footer>Footer</footer>
+</body>
+</html>
