@@ -259,3 +259,154 @@ Ex:
       <p class="Para Effect">Para-8</p>
 </body>
 </html>
+
+
+
+
+
+CSS Selectors
+- Primary Selectors
+- Rational Selectors
+- Attribute Selectors
+    ~=
+    |=
+    ^=
+    $=
+
+4. Dynamic Classes
+    a) Element State Classes
+
+            :hover
+            :active
+            :focus
+            :target
+            :checked
+            :disabled
+            :read-only
+            :visited
+   
+    b) Validation State Classes
+
+            :required
+            :optional
+            :valid
+            :invalid
+            :in-range
+            :out-of-range
+
+    c) Structural Classes
+
+            :first-child
+            :last-child
+            :nth-child()            : level number, even or odd
+            :nth-of-type()            : every nth occurrence starting from specified
+            :nth-last-of-type()        : every nth occurrence from last.
+
+Syntax:
+       li:nth-child(4) {  }            => access 4th element
+       li:nth-child(even){ }        => access even occurrences [2, 4, 6, 8..]
+       li:nth-of-type(2n) { }        => every 2nd from top starting from 2nd.
+       li:nth-of-type(2n+1) { }        => every 2nd from top starting from 1st
+       li:nth-last-of-type(2n+1){ }    => every 2nd from bottom starting from last 1.
+
+
+            ::before
+            ::after
+            ::selection
+            ::placeholder
+            ::first-letter
+            ::first-line
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+       ul {
+        list-style: none;
+        display: flex;
+        font-family: Arial;
+       }
+       li::after {
+          content: " > ";
+          padding-left: 10px;
+          padding-right: 10px;
+       }
+    </style>
+</head>
+<body>
+   <ul>
+      <li> <span class="bi bi-house-door"></span> Home </li>
+      <li> Mobiles & Accessories </li>
+      <li> Mobiles </li>
+      <li> Apple Mobile </li>
+      <li> Apple iPhone  </li>
+   </ul>
+</body>
+</html>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+       ul {
+        list-style: none;
+        display: flex;
+        font-family: Arial;
+       }
+       li::before {
+          content: " > ";
+          padding-left: 10px;
+          padding-right: 10px;
+       }
+       li:first-child::before {
+          content: "  ";
+       }
+       p::first-letter {
+          font-size: 30px;
+          font-style: Arial;
+          float: left;
+       }
+       p::selection {
+          background-color: yellow;
+          text-decoration: underline 2px solid red;
+          font-family: Brush Script MT;
+       }
+       input::placeholder {
+          background-color: yellow;
+          color:red;
+          padding: 10px;
+       }
+    </style>
+</head>
+<body>
+    <input type="text" size="30" placeholder="Search Amazon.in">
+   <ul>
+      <li> <span class="bi bi-house-door"></span> Home </li>
+      <li> Mobiles & Accessories </li>
+      <li> Mobiles </li>
+      <li> Apple Mobile </li>
+      <li> Apple iPhone  </li>
+   </ul>
+   <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsum dolorem saepe in officia distinctio cum quasi impedit consectetur laudantium sapiente quidem assumenda nobis a, autem, delectus explicabo sunt quae!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. At officia quis, quos id illum aliquam corporis libero maxime. Tempora adipisci pariatur accusamus, ea laudantium id? Harum atque ab nostrum praesentium.
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est ad doloremque quisquam officiis suscipit, impedit, eligendi quaerat debitis inventore et odio architecto quam! Aperiam totam dolor accusamus quod exercitationem facilis.
+   </p>
+</body>
+</html>
+
+5. Universal Selector
+
+    * {
+
+     }
