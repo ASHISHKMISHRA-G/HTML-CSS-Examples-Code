@@ -1,0 +1,357 @@
+CSS Box Model
+1. Margins
+
+        margin            : all directions [short hand].
+                          top, right, bottom, left.
+
+                          {
+                           margin: 0px 50px 0px 50px;
+                          }
+
+        margin-left
+        margin-right
+        margin-top
+        margin-bottom
+
+
+2. Padding
+
+        padding            : short hand for all directions
+                          [top, right, bottom, left]
+        padding-left
+        padding-right
+        padding-top
+        padding-bottom
+
+3. Border
+       
+        border            : short hand for all directions.
+                          border have size, style and color.
+
+        border-left        : short hand for left border.
+        border-left-width
+        border-left-style
+        border-left-color
+
+        ... similar for all directions ...
+
+        border-image        : It uses URL for image as border.
+                          [It have url, offset, style]
+
+                          Url()        : image page
+                          style        : stretch, space
+                          offset        : 0 to 100
+
+Note: You can set border image only when border is defined.
+
+Syntax:
+       
+        .container {
+
+            border : 10px solid transparent;
+            border-image: url("../public/images/border.jpg") stretch 70;
+
+        }
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            border:30px solid transparent;
+            border-image: url("../public/images/border.jpg") stretch 50 ;
+            padding: 20px 50px 30px 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi cumque voluptatum rerum doloribus, tenetur veritatis minima dolores fugiat vel! Similique, repellat architecto distinctio dolore esse deserunt voluptates quae delectus corporis?
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta qui suscipit ex debitis voluptate distinctio ipsa, quo eligendi tempore minus rem magni, sapiente, quam veniam aspernatur temporibus nihil ullam velit!
+       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus qui ad placeat quas ut veritatis laudantium ipsam quia quis repellendus, reprehenderit iste culpa quam excepturi cupiditate corporis sequi aut! Culpa!
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Est facere ab saepe, excepturi labore cupiditate totam, sunt enim fuga quod officiis ut ipsum laboriosam mollitia quaerat exercitationem impedit quibusdam hic!
+    </div>
+</body>
+</html>
+
+
+4. Border Radius
+
+        border-radius            : short hand for all directions
+        border-top-left-radius
+        border-top-right-radius
+        border-bottom-left-radius
+        border-bottom-right-radius
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pic-1 {
+            border-top-right-radius: 100px;
+            border-bottom-left-radius: 100px;
+        }
+        .pic-2 {
+            border-top-left-radius: 100px;
+            border-bottom-right-radius: 100px;
+        }
+        .pic-3 {
+            border-bottom-right-radius: 100px;
+            border-top-left-radius: 100px;
+        }
+        .pic-4 {
+            border-bottom-left-radius: 100px;
+            border-top-right-radius: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img class="pic-1" src="../public/images/women-fashion.jpg" width="200" height="200">
+        <img class="pic-2" src="../public/images/men-fashion.jpg" width="200" height="200">
+    </div>
+    <div>
+        <img class="pic-3" src="../public/images/kids-fashion.jpg" width="200" height="200">
+        <img class="pic-4" src="../public/images/women-fashion.jpg" width="200" height="200">
+    </div>
+</body>
+</html>
+       
+5. width & height
+
+
+
+Summary
+- Margin
+- Padding
+- Border
+- Border Radius
+- Width & Height
+
+                             CSS Positions
+1. Static
+2. Absolute
+3. Fixed
+4. Relative
+5. Sticky
+
+                             CSS Z-Index
+
+- It controls the placement of elements in a stack.
+- It can change the order
+    a) back or backward
+    b) front or forward
+- CSS "z-index" uses index number starting from "0" [zero].
+
+Syntax:
+        .card-1 {
+            z-index: 0;
+        }
+            .card-2 {
+           z-index:1;
+        }
+
+        => card 2 is on top of card 1.
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .men {
+            width: 500px;
+            height: 300px;
+            background-image: url("../public/images/men-fashion.jpg");
+            background-size: cover;
+            border-radius: 10px;
+            z-index: 0;
+        }
+        .women {
+            width: 400px;
+            height: 200px;
+            background-image: url("../public/images/women-shop.jpg");
+            background-size: cover;
+            border-radius: 10px;
+            top:200px;
+            left: 100px;
+            z-index:2;
+        }
+        .kids {
+            width: 500px;
+            height: 400px;
+            background-image: url("../public/images/kids-fashion.jpg");
+            background-size: cover;
+            border-radius: 10px;
+            left: 400px;
+            top:100px;
+            z-index: 1;
+        }
+        button {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <button class="men"></button>
+    <button class="women"></button>
+    <button class="kids"></button>
+</body>
+</html>
+
+                             CSS Float
+- CSS float can make the elements float left or right.
+- You can control the float span for other elements using "clear" attribute.
+- Clear is required when float effects Adjacent elements.
+   [ left, right, both ]
+
+Syntax:
+        {
+         float:left | right;
+        }
+
+Ex: Landkit template
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landkit</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        header {
+            font-size: 20px;
+            font-family: Arial;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .brand-title {
+            font-size: 24px;
+            font-weight: bold;
+            color:blue;
+        }
+        nav span {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .btn-buy {
+            background-color: blue;
+            color:white;
+            padding: 10px;
+            border-radius: 10px;
+            width: 200px;
+        }
+        .banner {
+            width: 50%;
+            float:right;
+        }
+        main {
+            margin-top: 100px;
+        }
+        .main-title {
+            font-size: 50px;
+            font-family: Arial;
+            padding-left: 100px;
+            margin-bottom: 50px;
+        }
+        .main-subtitle {
+            font-size: 25px;
+            font-family: Arial;
+            padding-left: 100px;
+            color:gray;
+            margin-bottom: 40px;
+        }
+        .buttons-container {
+            padding-left: 100px;
+        }
+        button {
+            width: 200px;
+            height: 50px;
+            font-family: Arial;
+            font-size: 20px;
+        }
+        .btn-pages {
+            background-color: blue;
+            color:white;
+            border:none;
+        }
+        .btn-docs {
+            background-color: rgb(216, 216, 248);
+            border:none;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <span class="brand-title">Landkit.</span>
+        </div>
+        <div>
+            <nav>
+                <span>Landings</span>
+                <span>Pages</span>
+                <span>Account</span>
+                <span>Documentation</span>
+            </nav>
+        </div>
+        <div>
+            <span class="btn-buy">Buy Now</span>
+        </div>
+    </header>
+    <section>
+        <main>
+            <img src="./images/landkit-banner.png" class="banner">
+            <div>
+                <div class="main-title">Welcome to <span style="color:blue">Landkit</span>. Develop anything.</div>
+                <div class="main-subtitle">Build a beautiful, modern website with flexible Bootstrap components built from scratch.</div>
+                <div class="buttons-container">
+                    <button class="btn-pages">View Pages <span class="bi bi-arrow-right"></span> </button>
+                    <button class="btn-docs">Documentation</button>
+                </div>
+            </div>
+        </main>
+    </section>
+</body>
+</html>
+
+Ex: Float with Clear
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .welcome {
+            float: right;
+        }
+        div {
+            clear: both;
+        }
+        .shopper {
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="welcome">Welcome</h1>
+    <h1 class="shopper">Shopper</h1>
+     <div>Online Shopping Site</div>
+   
+</body>
+</html>
