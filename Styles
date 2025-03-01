@@ -1,0 +1,50 @@
+ Styles are additional attributes defined for HTML elements to make them more attractive and responsive.
+- Styles can be configured for elements in a page by using 3 techniques
+
+    a) Inline
+    b) Embedded
+    c) External Style Sheet
+
+1. Inline Styles:
+- The style attributes are defined for every element individually by using "style" attribute.
+
+Syntax:
+    <div style="key:value; key:value"> </div>
+
+- They are faster in rendering.
+- You can't reuse the styles.
+
+EX:
+ <h1 style="background-color:red; color:white; text-align:center">  Text </h1>
+
+2. Embedded:
+- In this technique the styles are written in a <style> container.
+- You can embed the container in <head> or <body>.
+- You can reuse the styles for various elements.
+- It is slower in rendering when compared to inline.
+
+Syntax:
+  <head>
+      <style>
+           h1 {
+    color:white;
+    background-color:red;
+    }
+     </style>
+</head>
+<body>
+   <h1> HTML </h1>
+   <h1> CSS </h1>
+</body>
+
+FAQ's:
+1. Where to embed the style container?
+A. You can embed in <head> or in <body>
+
+2. What is difference between styles in <head> and in <body>?
+A. Styles in head will save round-trip.
+    Styles in body use round-trip.
+
+3. If styles are defined for element in both head and body section, which set will apply?
+A. If different attributes are defined then all will apply.
+    If same attributes is defined then the lastest will apply.
