@@ -1,0 +1,118 @@
+ CSS Inheritance
+
+- Inheritance enables reusability of styles.
+- The styles defined for parent element are used by child.
+- Child element inherits specific set of styles from parent.
+- You can control them by using inheritance values
+    a) inherit
+    b) initial
+    c) unset
+
+Syntax:
+     child {
+             all : inherit;
+     }
+
+    child {
+          attribute1: initial;
+          attribute2: inherit;
+          attribute3: unset;
+    }
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 3px double red;
+            padding: 20px;
+            color:red;
+        }
+        h2 {
+            border:inherit;
+            padding: inherit;
+            color:initial;
+            font-weight: unset;
+        }
+        h1 {
+            all :inherit;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        Container Text
+        <h1>Styles</h1>
+        <h2>Welcome</h2>
+    </div>
+</body>
+</html>
+
+                               CSS Rules
+- If styles are embedded, inline and external then what is the priority.
+- If styles are using type, Id and class selector then what is the priority.
+- Why we need MIME?
+- What is MIME of CSS?
+- How to target CSS for various output devices?
+- Is MIME type required for <link> ?
+- How MIME is defined for <link> ?
+
+                             CSS Colors
+- Color Name
+- Shade Name
+- Hexadecimal
+- rgb()
+- rgba()
+- hsl()
+- hsla()
+- linear-gradient
+- radial-gradient
+
+                           CSS Units
+- Units are required for handling the dimensions and position of element in page.
+- Units are classified into 2 types
+
+    a) Absolute Units
+    b) Relative Units
+
+- Absolute units are individual and not effected by other elements in page.
+- Relative units depends on parent or adjacent elements.
+
+
+    a) em        Element size
+    b) rem        Root element size
+    c) fr            Fraction
+    d) %            Ratio with regard to browser or its parent
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            font-size: 60px;
+        }
+        p {
+            font-size: 2rem;
+        }
+        .head {
+            font-size: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    Body Text
+    <div class="container">
+        Container Text
+        <div class="head">Heading</div>
+        <p>Paragraph Text</p>
+    </div>
+</body>
+</html>
