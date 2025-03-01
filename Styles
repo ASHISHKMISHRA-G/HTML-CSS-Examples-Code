@@ -229,3 +229,27 @@ Ans:  CDN is Content Delivery Network.
 3. If styles are defined for element in both head and body section, which set will apply?
 A. If different attributes are defined then all will apply.
     If same attributes is defined then the lastest will apply.
+
+CSS Minification
+- Minification is a technique used to compress the code.
+- It removes the optional code blocks and writes logic in shorthand technique.
+- It reduces the size of file but keeps the functionality same.
+- Unminified or uncompressed files are used in "Development".
+- Minified files are used in "Production".
+
+Minifying CSS:
+1. Copy the actual CSS code from your  "ticket.css" file
+
+2. Visit the website   "https://www.toptal.com/developers/cssminifier&quot;
+
+3. Paste the actual CSS code and click "Minify" button
+
+4. Copy the compressed code, go to your  "src/styles" folder.
+
+5. Add a new file  "ticket.min.css" and paste the minified code.
+
+6. Link the minified file to webpage.
+
+<head>
+   <link rel="stylesheet" href="../src/styles/ticket.min.css">
+</head>
