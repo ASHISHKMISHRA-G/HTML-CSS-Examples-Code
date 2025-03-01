@@ -1,0 +1,261 @@
+                    CSS Selectors
+- Style is an Object.
+- Object keeps all related data and logic together.
+- Object comprises of Keys and Values.
+- Values are stored with reference of keys.
+- CSS uses an object model called "CSSOM", which is used to set effects for elements.
+- CSS object requires a selector to apply the given effects, when you are writing styles embedded or in external file.
+
+Syntax:
+        selector
+        {
+               key : value;
+           key : value;
+        }
+
+- Selectors are categorized into various groups by developers.
+
+    1. Primary Selectors
+    2. Rational Selectors
+    3. Structural Selectors
+    4. Attribute Selectors
+    5. Dynamic Classes
+    6. Elements State Classes
+    7. Validation State Classes
+    8. Universal Selector
+    9. Language Selector
+    10. Root Selector etc..
+
+Primary Selectors
+
+1. Type Selector
+ - It refers to element name.
+          p, h1, table, div, span, form, input..
+
+ - It is used for elements, when they need same style at every occurrence.
+ - You can't ignore style at any specific occurrence.
+
+Syntax:
+        h1, p, table
+        {
+
+        }
+
+2. ID Selectors
+- Every element can use a unique ID.
+- You can configure styles for ID using "#".
+- You can select only the element, where you want to apply the styles.
+
+Syntax:
+           #effect
+        {
+        }
+
+        <h1   id="effect">
+        <p  id="effect">
+        <img id="effect">
+
+- Every element can refer to only one "ID".
+- Hence you can't apply multiple categories of styles to one element using ID.
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #text-effect
+         {
+            color:red;
+            text-align: center;
+         }
+         #border-effect
+         {
+            border:2px dotted red;
+            padding: 10px;
+         }
+         #bg-effect {
+            background-color: yellow;
+         }
+    </style>
+</head>
+<body>
+    <h1 id="text-effect">Web Technologies</h1>
+</body>
+</html>
+
+3. Class Selector
+ - Every element can use multiple classes.
+ - Styles for class are defined by using ".name".
+ - Classes are accessed by using "class" attribute.
+ - A class can implement multiple categories of styles.
+ - All styles are separated with blank space.
+
+Syntax:
+        .c1  {   }
+        .c2  {   }
+        .c3  {   }
+
+        <div  class="c1 c2 c3">
+        <div class="c2">
+        <div class="c1 c3">
+        <button class="btn btn-primary">
+        <div class="bi bi-person">
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text-effect
+         {
+            color:red;
+            text-align: center;
+         }
+         .border-effect
+         {
+            border:2px dotted red;
+            padding: 10px;
+         }
+         .bg-effect {
+            background-color: yellow;
+         }
+    </style>
+</head>
+<body>
+    <h1 class="border-effect text-effect bg-effect">Web Technologies</h1>
+    <h1 class="border-effect text-effect">HTML</h1>
+    <h1 class="bg-effect text-effect">CSS</h1>
+</body>
+</html>
+
+FAQ: If styles are defined for element using ID, Class and Type then which set will apply?
+Ans:
+    a) If different attributes are defined then all will apply.
+        b) If same attribute is defined then it uses priority
+
+            1st Priority        ID selector
+            2nd Priority        Class Selector
+            3rd Priority        Type Selector
+
+Note: You can group selectors by using "," as delimiter.
+
+        h1, #text-style,  .bg-style  
+        {
+
+        }
+
+        table, form {
+
+        }
+
+        .p1,  .bg-style {
+
+        }
+
+Rational Selectors:
+
+            Child Selector            nav  span {  }
+            Adjacent Selector        nav+span {  }
+            Sibling Selector        nav~span {  }  [all siblings within the scope]
+
+
+Attribute Selectors:
+- You can define styles for elements based on the attribute and value they use.
+
+Syntax:
+   
+        element[attribute]        It refers to all elements that have given attribute.
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       p[id] {
+         color:red;
+       }
+    </style>
+</head>
+<body>
+        <p>HTML</p>
+        <p>CSS</p>
+        <p id="p3">JavaScript</p>
+        <p>jQuery</p>
+        <p id="p5">Node JS</p>
+        <p>React JS</p>
+</body>
+</html>
+
+
+        element[attribute=value]     It refers to all element that have Id matching with val.
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type="button"] {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+       <dl>
+        <dt>User Name</dt>
+        <dd><input type="text"></dd>
+        <dt>Mobile</dt>
+        <dd><input type="text"></dd>
+       </dl>
+       <input type="button" value="Login">
+       <input type="button" value="Cancel">
+</body>
+</html>
+
+Attribute Conditions:
+
+          [attribute=value]            exact match
+       
+          [attribute$=value]            ends with
+
+          [attribute^=value]            starts with
+       
+          [attribute|=value]            starts with and have "-" delimiter
+
+          [attribute~=value]            Individual and separated with blank space
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       p[class~="Effect"] {
+         color:red;
+       }
+    </style>
+</head>
+<body>
+      <p class="Effect">Para-1</p>
+      <p class="ParaEffect">Para-2</p>
+      <p class="TextEffectPara">Para-3</p>
+      <p class="Para-Effect">Para-4</p>
+      <p class="Effect-Para">Para-5</p>
+      <p class="Text Effect Para">Para-6</p>
+      <p class="Effect Para">Para-7</p>
+      <p class="Para Effect">Para-8</p>
+</body>
+</html>
