@@ -1,0 +1,46 @@
+Multimedia in HTML
+- Multimedia refers to audio, video and animations.
+- HTML multimedia includes elements like
+    a) <marquee>
+    b) <video>
+    c) <audio>
+
+Marquee:
+- It sets scrolling and sliding content in page.
+- You can controll using following attributes:
+
+1. scrollamount    : It sets marquee scrolling speed from 1 to 100.
+2. direction    : It sets scrolling direction left, right, up and down.
+3. loop        : It defines the number of times to display.
+
+          <marquee scrollamount="20" direction="right" loop="3">
+               .... your content........
+         </marquee>
+
+4. width & height    : Sets width and height for marquee area.
+5. bgcolor        : Sets background color.
+6. behavior    : It sets "alternate" behavior, which changes from scroll to slide.
+
+        <marquee behavior="alternate">   Text </marquee>
+
+Video & Audio
+- HTML supports videos of following types
+    .mkv
+    .avi
+    .mov
+    .mp4
+    .ogg etc..
+- The <video> element is used to embed videos into page.
+
+Syntax:
+    <video src=""  controls   width=""  height="" autoplay poster=""> </video>
+
+- HTML supports audio of type
+    .mp3, .wav, .midi etc..
+
+- The <audio> element is used to embed audio files.
+
+    <audio src=""  controls  poster=""> </audio>
+
+Ex:
+ <video controls poster="../public/images/java.png" src="../public/videos/js-class.mp4" width="400" height="300"></video>
