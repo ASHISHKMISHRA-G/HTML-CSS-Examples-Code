@@ -1,0 +1,152 @@
+CSS Text Effects
+
+font-style            : Italic
+font-weight        : bold
+font-size            : size
+font-family        : font family name
+font-variant         : small-caps
+color            : text color
+
+text-align            : left, center, right, justify
+text-decoration    : underline, overline, line through, line style, size and color
+                 Syntax:
+                    h1 {
+                         text-decoration: underline 2px wavy red;
+                    }
+text-transform        : uppercase, capitalize, lowercase.
+text-shadow        : sets shadow for text
+text-overflow        : ellipsis
+text-indent        : first line spacing.
+
+letter-spacing        : space between letters.
+word-spacing        : space between words.
+line-height        : space between lines
+white-space        : wrap, nowrap
+overflow            : hidden, scroll, auto.
+word-break        : break words to reduce right raggedness.
+
+
+                         CSS Transforms
+- Transform allow to change the position, size and orientation of element in page.
+- You can dynamic control using transforms.
+- CSS transforms are classified into 2 types
+
+    a) 2D Transforms
+    b) 3D Transforms
+
+2D Transforms:
+- Two dimensional transformations.
+- 2D uses X & Y axis.
+- CSS 2D transform methods
+
+    a) translate()
+    b) scale()
+    c) skew()
+    d) rotate
+    e) matrix()
+
+1. translate()
+    - It moves element from one location to another along X & Y axis.
+    - It provides the methods
+            a) translate()        short hand both directions
+            b) translateX()
+            c) translateY()
+Syntax:
+        img {
+               transform : translate(100px, 400px);    =>    x, y
+         }
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            overflow: hidden;
+        }
+        img {
+          transform: translateX(100%);    
+          transition: 2s;
+        }
+        img:hover {
+          transform: translateX(0%);
+          transition: 5s;
+        }
+    </style>
+</head>
+<body>
+    <img src="../public/images/slide-1.JPG" width="100%">
+</body>
+</html>
+
+2. scale()
+ - It changes the width and height of element.
+ - It provides the methods
+
+        a) scale()
+        b) scaleX()
+        c) scaleY()
+
+Syntax:
+        img {
+              transform : scale(1, 1);        1 = 100%  x, y   x=width, y=height
+        }
+
+3. skew()
+- It tilts the element by specified angle.
+- It provides the methods
+
+        a) skew()
+        b) skewX()
+        c) skewY()
+
+Syntax:
+        img {
+          transform: skewX(20deg)
+        }
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .pic-1{
+            opacity: 0.2;
+        }
+        img {
+            position: absolute;
+        }
+        .pic-1 {
+            transform: skewX(-40deg) translateX(120px);
+        }
+    </style>
+</head>
+<body>
+    <img class="pic-1" src="../public/images/kids-fashion.jpg" width="300" height="300">
+    <img class="pic-2" src="../public/images/kids-fashion.jpg" width="300" height="300">
+</body>
+</html>
+
+4. rotate
+- It rotates element by specified angle.
+- It provides the methods
+
+    a) rotate()
+    b) rotateX()
+    c) rotateY()
+
+Syntax:
+    img {
+        transform: rotate(20deg);
+    }
