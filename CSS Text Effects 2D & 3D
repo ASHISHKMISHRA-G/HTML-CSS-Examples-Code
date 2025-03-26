@@ -150,3 +150,65 @@ Syntax:
     img {
         transform: rotate(20deg);
     }
+
+2D Transforms
+    translate()
+    scale()
+    skew()
+    rotate()
+
+5. matrix()
+- It applies multiple styles of transforms.
+
+Syntax:
+    matrix(scaleX(), skewX(), skewY(), scaleY(), translateX(), translateY())
+
+        scale    : 1 = 100%
+        skew    : 0.1 = 10deg
+        translate  : 100 = 100px
+
+                            3D Transforms
+
+- 3 Dimensional transformations along X, Y and Z axis.
+- The methods are
+
+        translate3D()
+        scale3D()
+        skew3D()
+        rotate3D()
+        matrix3D()
+
+- Every 3D method provides  "Z" index
+
+        translateZ(), scaleZ(), skewZ(), rotateZ()
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        img {
+            transform: scale3d(1,1,1);
+            transition: 2s;
+        }
+        img:hover {
+            transform: scale3d(2,2,4);
+            box-shadow: 10px 10px 2px black;
+            transition: 3s;
+        }
+    </style>
+</head>
+<body>
+    <img class="pic-1" src="../public/images/kids-fashion.jpg" width="100" height="100">
+</body>
+</html>
+
