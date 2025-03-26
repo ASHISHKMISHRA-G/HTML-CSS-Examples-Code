@@ -1,0 +1,133 @@
+    CSS Transitions
+- Transition controls the transformation.
+
+        transition-duration
+        transition-delay
+        transition-property
+        transition-timing-function
+        transition [short hand for all effects]
+
+a) duration  : Total time taken to complete the transformation.
+
+b) delay        : It sets the delay time for transformation.
+              It defines the time take to start the transformation.
+
+c) property  : It defines the properties that have to use the duration.
+             If property is not defined then all properties will use the duration defined.
+
+d) timing-function:  It is a pre-defined animation function, which you can apply for
+                   elements.
+                    - ease-in
+                    - ease-out
+                    - steps()  etc..
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 50px;
+            height: 30px;
+            background-color: red;
+            transition-duration: 2s;
+        }
+        div:hover {
+            width: 1000px;
+            background-color: yellow;
+            transition-duration: 5s;
+            transition-property: width;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
+
+Ex:  Translate Shopper Image
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .men-fashion {
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+        }
+        img {
+            width: 420px;
+            height: 400px;
+            transition-duration: 500ms;
+        }
+        img:hover {
+            transform: translateX(-10px);
+            transition-duration: 500ms;
+        }
+    </style>
+</head>
+<body>
+    <div class="men-fashion">
+        <img src="../public/images/men-fashion.jpg">
+    </div>
+</body>
+</html>
+
+Ex: TranslateY shopper Template
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .women-fashion {
+            background-image: url("../public/images/side-1.jpg");
+            width: 300px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: center;
+            overflow: hidden;
+            transition-duration: 500ms;
+        }
+        .women-fashion:hover {
+            background-image: url("../public/images/side-2.jpg");
+        }
+        .icons {
+            transform: translateY(50px);
+        }
+        .icons span {
+            background-color: white;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 20px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        .women-fashion:hover .icons {
+            transform: translateY(-50px);
+            transition-duration: 500ms;
+        }
+    </style>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="women-fashion">
+        <div class="icons">
+            <span class="bi bi-eye"></span>
+            <span class="bi bi-cart"></span>
+            <span class="bi bi-heart"></span>
+        </div>
+    </div>
+</body>
+</html>
